@@ -67,3 +67,25 @@
     @apply bg-white
   }
 }
+
+.card:hover img.itemImg {
+  @apply delay-75 duration-100 scale-90 ease-in-out;
+}
+
+.itemScroll::-webkit-scrollbar {
+  width: 7px;
+}
+
+.itemScroll::-webkit-scrollbar-track {
+  background-color: rgb(11, 11, 65);
+}
+
+.itemScroll::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(blue, crimson);
+}
+
+.itemScroll::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparent;
+}

@@ -54,7 +54,13 @@ module.exports = {
         darkColor: '#53423A',
         textBlack: '#1a1a1a',
         hoverOrange: '#ff5200',
-        blackOpacity:'#BFBFBF'
+        blackOpacity:'#BFBFBF',
+				bgWhite: '#F5F6FB',
+				grayColor: '#808080',
+				opacityBackground: 'rgba(0, 0, 0, 0.8)',
+				whiteBoard: '#F5F6FB',
+				blackBg: '#282828',
+				hoverGray: '#E6E6E6'
 			},
 			fontFamily: {
 				roboto: ['Roboto', 'sans-serif'],
@@ -74,6 +80,6 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [require('tailwindcss-animate'), require('daisyui')],
+	plugins: [require('tailwindcss-animate')],
 	darkMode: ['class'],
 }

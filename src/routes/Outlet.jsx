@@ -1,14 +1,16 @@
-import { useContext } from 'react'
-import { Navigate, Outlet } from 'react-router-dom'
-import { MyContext } from '../hooks/Context'
+import { useContext } from 'react';
+import { Navigate, Outlet } from 'react-router-dom';
+import { MyContext } from '../hooks/Context';
+
 const PrivateRoute = () => {
-	const { user } = useContext(MyContext)
+  const { user } = useContext(MyContext);
+  const isLoggedIn = sessionStorage.getItem('isLoggedIn');
 
-	if (!user) {
-		return <Navigate to='/login' />
-	}
+  if (!user && !isLoggedIn) {
+    return <Navigate to='/login' />;
+  }
 
-	return <Outlet />
+  return <Outlet />;
 }
 
-export default PrivateRoute
+export default PrivateRoute;

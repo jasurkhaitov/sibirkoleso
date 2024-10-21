@@ -49,6 +49,7 @@ export default function Login() {
 
 		if (login.length >= 5 && password.length >= 6) {
 			if (login === adminPassword.login && password === adminPassword.password) {
+				sessionStorage.setItem('isLoggedIn', 'true');
 				setUser(true)
 				navigate('/admin')
 			} else {

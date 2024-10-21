@@ -1,5 +1,5 @@
 import { styles } from '@/util/constant';
-import { contactData } from '@/util/data';
+import { contactData, settings } from '@/util/data';
 import React from 'react';
 
 export default function Contact() {
@@ -15,16 +15,16 @@ export default function Contact() {
         <div className="mb-6 flex flex-col">
           <p className="text-md text-gray-600 ">Единая справочная:</p>
           <a
-            href="tel:+88007751050"
+            href={`tel:+${settings.phoneNumber}`}
             className="text-[18px] leading-[25px] font-bold text-textBlack hover:text-hoverOrange"
           >
-            8 800 775-10-50
+            {settings.phoneNumberText}
           </a>
           <a
-            href="mailto: info@sibirkoleso.ru"
+            href={`mailto:${settings.email}`}
             className="text-[18px] leading-[25px] font-bold text-textBlack hover:text-hoverOrange"
           >
-            info@sibirkoleso.ru
+            {settings.email}
           </a>
           <p className="text-sm text-gray-800 mt-5">{contactData.addressOne}</p>
           <p className="text-sm text-gray-800">{contactData.addressTwo}</p>

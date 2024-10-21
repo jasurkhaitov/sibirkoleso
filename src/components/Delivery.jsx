@@ -4,7 +4,7 @@ import { TbTruckDelivery } from 'react-icons/tb';
 import { FaWarehouse } from 'react-icons/fa';
 import { LuPlane } from 'react-icons/lu';
 import { styles } from '@/util/constant';
-import { deliveryMethods } from '@/util/data';
+import { deliveryMethods, settings } from '@/util/data';
 
 export default function Delivery() {
   const { tyreBox, incity, warehouse, transport } = deliveryMethods;
@@ -21,11 +21,10 @@ export default function Delivery() {
           клиентов. Если вы не нашли удобный для вас способ доставки — вы всегда
           можете связаться с нашими менеджерами по телефону:{' '}
           <a
-            href="tel:+88007751050"
-            className="text-[15px] leading-[25px] font-bold text-textBlack hover:text-hoverOrange"
+            href={`tel:+${settings.phoneNumber}`}
+            className="text-[18px] leading-[25px] font-bold text-textBlack hover:text-hoverOrange"
           >
-            {' '}
-            8 800 775-10-50{' '}
+            {settings.phoneNumberText}
           </a>{' '}
           {'	'} (звонок бесплатный) и обсудить любые варианты доставки вашего
           заказа.

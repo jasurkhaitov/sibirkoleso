@@ -1,7 +1,7 @@
 import React from 'react';
 import AboutImage from '../assets/img/about.webp';
 import { styles } from '@/util/constant';
-import { aboutData } from '@/util/data';
+import { aboutData, settings } from '@/util/data';
 
 export default function About() {
   return (
@@ -50,10 +50,10 @@ export default function About() {
             нашего магазина, для этого вам нужно позвонить по телефону:
           </p>
           <a
-            href="tel:+88007751050"
+            href={`tel:+${settings.phoneNumber}`}
             className="text-[18px] leading-[25px] font-bold text-textBlack hover:text-hoverOrange"
           >
-            8 800 775-10-50
+            {settings.phoneNumberText}
           </a>
           <p className="text-xs md:text-xs  text-gray-600">
             (звонок бесплатный)

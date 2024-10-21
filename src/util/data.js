@@ -9,7 +9,7 @@ export const tires = [
 		height: '4x98',
 		diametr: '35',
 		picture: '/local/templates/sk/src/images/no_photo.gif',
-		price: '1 770 ₽₽ ',
+		price: '1 770 ₽ ',
 		priceValue: 1770,
 	},
 	{
@@ -1795,4 +1795,66 @@ export const deliveryMethods = {
 
 		desc: 'Заказанный товар вы можете оплатить через банк. Счет на оплату отправляется электронным письмом на основании заказа. Необходимо произвести оплату в трехдневный срок заказчиком. В случае оплаты другим лицом свяжитесь с нами для смены плательщика. Электронный перевод денежных средств может осуществляться от 1 до 3 дней в зависимости от банка оплаты. При поступлении денежных средств к нам на счет, мы свяжемся с вами по телефону указанному в заказе, для уточнения информации, по отправке заказанного вами товара. Если звонка от нас не поступило, вы всегда можете уточнить информацию по телефону: 8-800-775-10-50.',
 	}
+}
+
+//! Client Requests
+
+export const CustomerRequests = [
+	{
+		id: 1,
+		surName: 'Xaitov',
+		name: 'Jasur',
+		email: 'xaitovjasur0@gmail.com',
+		phone: '998880751610',
+		whatsapp: '998880751610',
+		date: '20/10/2024 - 13:05'
+	},
+	{
+		id: 2,
+		surName: 'Omonov',
+		name: 'Orzu',
+		email: 'orzu0@gmail.com',
+		phone: '6548678776',
+		telegramNumber: '99888645610',
+		date: '02/11/2024 - 15:05'
+	},
+	{
+		id: 3,
+		surName: 'Xaitov',
+		name: 'Jasur',
+		email: 'xaitovjasur0@gmail.com',
+		phone: '998880751610',
+		telegramNumber: '65468468468',
+		date: '20/10/2024 - 13:05'
+	},
+	{
+		id: 4,
+		surName: 'Xaitov',
+		name: 'Jasur',
+		email: 'xaitovjasur0@gmail.com',
+		phone: '998880751610',
+		whatsapp: '658468424',
+		date: '20/10/2024 - 13:05'
+	},
+	{
+		id: 5,
+		surName: 'Xaitov',
+		name: 'Jasur',
+		email: 'xaitovjasur0@gmail.com',
+		phone: '998880751610',
+		telegramNumber: '9988868971665410',
+		date: '20/10/2024 - 13:05'
+	},
+]
+
+//! Settings
+
+import Logo from '../assets/logo.svg'
+
+export const settings = {
+	logoIcon: (Logo),
+	name: 'СибирьКолесо',
+	phoneNumberText: '8 800 775-10-50',
+	phoneNumber: 88007751050,
+	email: 'info@sibirkoleso.ru'
 }

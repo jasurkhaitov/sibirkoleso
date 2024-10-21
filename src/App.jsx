@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
-import Home from './page/Home'
+import { useCart } from './hooks/CartContext'
 import { MyContext } from './hooks/Context'
+import PrivateRoute from './routes/Outlet'
+
+import Home from './page/Home'
 import Error from './page/Error'
 import Login from './page/Login'
 import Admin from './page/Admin'
-import PrivateRoute from './routes/Outlet'
 import WheelItems from './page/WheelItems'
 import TireItems from './page/TireItems'
 import TiresPage from './page/TiresPage'
@@ -14,14 +16,16 @@ import AboutPage from './page/AboutPage'
 import ContactPage from './page/ContactPage'
 import PaymentPage from './page/PaymentPage'
 import DeliveryPage from './page/DeliveryPage'
-import { useCart } from './hooks/CartContext'
 import Checkout from './page/Checkout'
+import AdminWheelsPage from './page/AdminWheelsPage'
+import AdminTirePage from './page/AdminTirePage'
+import SettingsPage from './page/SettingsPage'
 
 export default function App() {
   const { state } = useCart(); 
   const { cartItems } = state;
 
-	const [user, setUser] = useState(true)
+	const [user, setUser] = useState(false)
 	const [numberOfStore, setNumberOfStores] = useState(0)
 	const [tireParam, setTireParam] = useState({ width: [], height: [], diametr: [], brand: [] })
 	const [wheelParam, setWheelParam] = useState({ width: [], height: [], diametr: [], brand: [] })
@@ -55,6 +59,9 @@ export default function App() {
 
 					<Route path='admin' element={<PrivateRoute />}>
 						<Route path='/admin' element={<Admin />} />
+						<Route path='/admin/wheels' element={<AdminWheelsPage />} />
+						<Route path='/admin/tires' element={<AdminTirePage />} />
+						<Route path='/admin/settings' element={<SettingsPage />} />
 					</Route>
 
 					<Route path='*' element={<Error />} />

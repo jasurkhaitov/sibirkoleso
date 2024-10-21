@@ -58,7 +58,7 @@ module.exports = {
 				bgWhite: '#F5F6FB',
 				grayColor: '#808080',
 				opacityBackground: 'rgba(0, 0, 0, 0.8)',
-				whiteBoard: '#F5F6FB',
+				whiteBoard: '#f2f4fa',
 				blackBg: '#282828',
 				hoverGray: '#E6E6E6'
 			},
